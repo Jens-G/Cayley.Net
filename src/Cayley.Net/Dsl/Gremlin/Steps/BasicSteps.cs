@@ -16,7 +16,6 @@ namespace Cayley.Net.Dsl.Gizmo.Steps
         private const string BOTH = ".both({0})";
         private const string OUT = ".Out({0})";
         private const string IN = ".in({0})";
-        private const string ALL = ".al()";
 
         public static IGremlinQuery BothV(this IGremlinQuery query)
         {
