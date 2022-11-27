@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Cayley.Net.Dsl.Gremlin.Steps
+namespace Cayley.Net.Dsl.Gizmo.Steps
 {
     public static class IfThenElseStep
     {

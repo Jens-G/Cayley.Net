@@ -1,7 +1,7 @@
 ﻿using Cayley.Net.ApiModels;
 using Cayley.Net.Dsl;
-using Cayley.Net.Dsl.Gremlin;
-using Cayley.Net.Dsl.Gremlin.Steps;
+using Cayley.Net.Dsl.Gizmo;
+using Cayley.Net.Dsl.Gizmo.Steps;
 
 namespace Cayley.Net.Console
 {
@@ -9,8 +9,14 @@ namespace Cayley.Net.Console
     {
         private static void Main()
         {
-            ICayleyClient client = new CayleyClient("http://localhost:64210/api/v1/query/gremlin");
+            ICayleyClient client = new CayleyClient("http://localhost:64210/api/v1/query/gizmo");
             IGraphObject g = new GraphObject();
+
+            var q = g.V("Bommeln").InE().All();
+            CayleyResponse r = client.Send(q);
+            System.Console.WriteLine(r.Content);
+
+
             IGremlinQuery query = g.V().Has("name", "Casablanca")
                 .Out("/film/film/starring")
                 .Out("/film/performance/actor")

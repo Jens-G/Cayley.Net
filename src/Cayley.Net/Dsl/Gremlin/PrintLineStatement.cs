@@ -1,4 +1,4 @@
-namespace Cayley.Net.Dsl.Gremlin
+namespace Cayley.Net.Dsl.Gizmo
 {
     public static class PrintLineStatement
     {

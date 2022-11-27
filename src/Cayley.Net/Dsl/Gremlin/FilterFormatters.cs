@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Cayley.Net.Dsl.Gremlin
+namespace Cayley.Net.Dsl.Gizmo
 {
     internal static class FilterFormatters
     {

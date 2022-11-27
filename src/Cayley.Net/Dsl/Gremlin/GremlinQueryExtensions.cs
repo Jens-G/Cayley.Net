@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Cayley.Net.Dsl.Gremlin
+namespace Cayley.Net.Dsl.Gizmo
 {
     public static class GremlinQueryExtensions
     {

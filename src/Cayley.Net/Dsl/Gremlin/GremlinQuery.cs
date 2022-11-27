@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Cayley.Net.Dsl.Gremlin
+namespace Cayley.Net.Dsl.Gizmo
 {
     internal class GremlinQuery : IGremlinQuery
     {

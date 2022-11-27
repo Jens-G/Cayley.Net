@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace Cayley.Net.Dsl.Gremlin
+namespace Cayley.Net.Dsl.Gizmo
 {
     [DebuggerDisplay("{DebugQueryText}")]
     internal class GremlinNodeEnumerable:  IGremlinQuery

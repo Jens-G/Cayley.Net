@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using Cayley.Net.Dsl.Gremlin;
+using Cayley.Net.Dsl.Gizmo;
 using Cayley.Net.Extensions;
 
 namespace Cayley.Net.Dsl

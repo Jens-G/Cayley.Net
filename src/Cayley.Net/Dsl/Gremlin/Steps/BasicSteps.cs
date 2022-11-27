@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Cayley.Net.Dsl.Gremlin.Steps
+namespace Cayley.Net.Dsl.Gizmo.Steps
 {
     public static class BasicSteps
     {
-        private const string BOTH_V = ".bothV";
-        private const string OUT_V = ".outV";
-        private const string IN_V = ".inV";
-        private const string BOTH_E = ".bothE";
-        private const string OUT_E = ".outE";
-        private const string IN_E = ".inE";
+        private const string BOTH_V = ".both()";
+        private const string OUT_V = ".out()";
+        private const string IN_V = ".in()";
+        private const string BOTH_E = ".both()";
+        private const string OUT_E = ".out()";
+        private const string IN_E = ".in()";
         private const string BOTH = ".both({0})";
         private const string OUT = ".Out({0})";
         private const string IN = ".in({0})";
+        private const string ALL = ".al()";
 
         public static IGremlinQuery BothV(this IGremlinQuery query)
         {

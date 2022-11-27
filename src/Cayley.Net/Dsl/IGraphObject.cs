@@ -1,4 +1,4 @@
-﻿using Cayley.Net.Dsl.Gremlin;
+﻿using Cayley.Net.Dsl.Gizmo;
 
 namespace Cayley.Net.Dsl
 {

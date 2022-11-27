@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Cayley.Net.Dsl.Gremlin
+namespace Cayley.Net.Dsl.Gizmo
 {
     public class IdentityPipe : IGremlinQuery
     {

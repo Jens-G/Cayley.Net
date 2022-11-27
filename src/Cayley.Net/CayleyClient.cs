@@ -2,7 +2,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Cayley.Net.ApiModels;
-using Cayley.Net.Dsl.Gremlin;
+using Cayley.Net.Dsl.Gizmo;
 using Cayley.Net.Extensions;
 
 namespace Cayley.Net

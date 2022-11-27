@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Cayley.Net.Dsl.Gremlin
+namespace Cayley.Net.Dsl.Gizmo
 {
     public struct Filter
     {
