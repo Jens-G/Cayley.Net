@@ -7,7 +7,7 @@ Cayley.Net
 
 > Cayley is an open-source graph inspired by the graph database behind [Freebase](http://freebase.com/) and Google's [Knowledge Graph](http://www.google.com/insidesearch/features/search/knowledge.html). Its goal is to be a part of the developer's toolbox where [Linked Data](http://linkeddata.org/) and graph-shaped data (semantic webs, social networks, etc) in general are concerned.
 
-##Sample
+## Sample
 
 ```csharp
   ICayleyClient client = new CayleyClient("http://localhost:64210/api/v1/query/gremlin");
@@ -61,11 +61,11 @@ Cayley.Net
 ```
 
 
-##Bugs
+## Bugs
 If you encounter a bug, performance issue, or malfunction, please add an [Issue](https://github.com/ziyasal/Cayley.Net/issues) with steps on how to reproduce the problem.
 
 
-##TODO
+## TODO
 - Improve Gremlin implementation
 - Add more tests
 - Add more documentation
