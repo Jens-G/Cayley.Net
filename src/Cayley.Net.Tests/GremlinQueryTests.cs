@@ -1,6 +1,6 @@
 ﻿using Cayley.Net.Dsl;
-using Cayley.Net.Dsl.Gremlin;
-using Cayley.Net.Dsl.Gremlin.Steps;
+using Cayley.Net.Dsl.Gizmo;
+using Cayley.Net.Dsl.Gizmo.Steps;
 using Cayley.Net.Extensions;
 using FluentAssertions;
 using NUnit.Framework;

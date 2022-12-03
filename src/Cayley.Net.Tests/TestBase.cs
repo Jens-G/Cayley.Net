@@ -1,6 +1,6 @@
-﻿using Moq;
+﻿using AutoFixture;
+using Moq;
 using NUnit.Framework;
-using Ploeh.AutoFixture;
 
 namespace Cayley.Net.Tests
 {
