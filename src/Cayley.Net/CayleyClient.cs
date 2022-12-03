@@ -16,24 +16,22 @@ namespace Cayley.Net
             _basePath = basePath;
         }
 
-        public CayleyResponse Send(IGremlinQuery query)
+        public Task<CayleyResponse> Send(IGremlinQuery query)
         {
             string queryText = query.Build();
             return Send(queryText);
         }
 
-        public CayleyResponse Send(string query)
+        public async Task<CayleyResponse> Send(string query)
         {
             HttpClient client = new HttpClient();
             var content = new StringContent(query);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-            Task<HttpResponseMessage> task = client.PostAsync(_basePath, content);
-            if (task.Result.IsSuccessStatusCode)
+            var response = await client.PostAsync(_basePath, content);
+            return new CayleyResponse()
             {
-                return new CayleyResponse { Content = task.Result.Content.ReadAsString() };
-            }
-
-            return default(CayleyResponse);
+                Content = response.Content.ReadAsString()
+            };
         }
     }
 }
