@@ -3,20 +3,18 @@ using Cayley.Net.Dsl.Gizmo;
 using Cayley.Net.Dsl.Gizmo.Steps;
 using Cayley.Net.Extensions;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 
 namespace Cayley.Net.Tests
 {
+    [TestClass]
     public class GremlinQueryTests : TestBase
     {
-        private IGraphObject g;
+        private readonly IGraphObject g = new GraphObject();
 
-        protected override void FinalizeSetUp()
-        {
-            g = new GraphObject();
-        }
 
-        [Test]
+        [TestMethod]
         public void VertexTest()
         {
             IGremlinQuery query = g.V();
@@ -24,7 +22,7 @@ namespace Cayley.Net.Tests
             query.Build().Should().Be("g.V()");
         }
 
-        [Test]
+        [TestMethod]
         public void MorphismTest()
         {
             IGremlinQuery query = g.M();
@@ -32,7 +30,7 @@ namespace Cayley.Net.Tests
             query.Build().Should().Be("g.Morphism()");
         }
 
-        [Test]
+        [TestMethod]
         public void Vertext_HasStep_Test()
         {
             IGremlinQuery query = g.V().Has("name", "Casablanca");
@@ -47,7 +45,7 @@ namespace Cayley.Net.Tests
             query.Build().Should().Be(@"g.V().Has('name','Casablanca').Out('/film/film/starring').Out('/film/performance/actor').Out('name')");
         }
 
-        [Test]
+        [TestMethod]
         public void Vertex_Basic_Query_Test()
         {
             IGremlinQuery query = g.V().Has("name", "Casablanca")
@@ -56,10 +54,10 @@ namespace Cayley.Net.Tests
               .Out("name")
               .All();
             query.Build().Should().NotBeNullOrWhiteSpace();
-            query.Build().Should().Be(@"g.V().Has('name','Casablanca').Out('/film/film/starring').Out('/film/performance/actor').Out('name').All()");
+            query.Build().Should().Be(@"g.V().Has('name','Casablanca').Out('/film/film/starring').Out('/film/performance/actor').Out('name').all()");
         }
 
-        [Test]
+        [TestMethod]
         public void Follow_With_Morphism_Path_Test()
         {
             var filmToActor = g.Morphism().Out("/film/film/starring").Out("/film/performance/actor");
@@ -70,10 +68,10 @@ namespace Cayley.Net.Tests
                .All();
 
             queryWithMorphism.Build().Should().NotBeNullOrWhiteSpace();
-            queryWithMorphism.Build().Should().Be("g.V().Has('name','Casablanca').Follow(g.Morphism().Out('/film/film/starring').Out('/film/performance/actor')).Out('name').All()");
+            queryWithMorphism.Build().Should().Be("g.V().Has('name','Casablanca').Follow(g.Morphism().Out('/film/film/starring').Out('/film/performance/actor')).Out('name').all()");
         }
 
-        [Test]
+        [TestMethod]
         public void Emit_Test()
         {
             var data = new { name = "ziya", age = 25, hasRoom = true };
